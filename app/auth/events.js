@@ -58,14 +58,51 @@ const onSignOut = function (event) {
     // otherwise, if an error occurred, run a signUpFailure function
     .catch(ui.signOutFailure)
 }
-
+// make a variable to check the winner of the game
+// we will have to do this for every possible winning combo - so 8 total
 const checkWinner = function () {
   console.log($('.play1').text())
   if ($('.play1').text() === ($('.play2').text() && $('.play3').text())) {
     console.log('win')
   }
+  // else if ($('.play1').text() === ($('.play4').text() && $('.play7').text())) {
+  //   console.log('win')
+  // }
+  // else if ($('.play2').text() === ($('.play5').text() && $('.play8').text())) {
+  //   console.log('win')
+  // }
+  // else if ($('.play3').text() === ($('.play6').text() && $('.play9').text())) {
+  //   console.log('win')
+  // }
+  // else if ($('.play4').text() === ($('.play5').text() && $('.play6').text())) {
+  //   console.log('win')
+  // }
+  // else if ($('.play7').text() === ($('.play8').text() && $('.play9').text())) {
+  //   console.log('win')
+  // }
+  // else if ($('.play1').text() === ($('.play5').text() && $('.play9').text())) {
+  //   console.log('win')
+  // }
+  // else if ($('.play3').text() === ($('.play5').text() && $('.play7').text())) {
+  //   console.log('win')
+  // }
 }
 
+const onNewGame = function (event) {
+  // prevent the default action of refreshing the page
+  event.preventDefault()
+
+  // we pass in the formData because it will need the info like email, password etc
+  // make a POST /sign-up request, pass it the email/password/confirmation
+  api
+    .newGame()
+    // if our sign up request is successful, run the signUpSuccess function
+    .then(ui.newGameStart)
+    // otherwise, if an error occurred, run a signUpFailure function
+    // .catch(ui.signOutFailure)
+}
+
+// define a variable for the first move, but make it the opposite so the first move is X
 let firstPlay = 'O'
 const onClick = function (event) {
   // console.log('event is ', event)
@@ -81,8 +118,6 @@ const onClick = function (event) {
   }
 }
 
-
-
 // export our event handler functions, so we can use them
 // in app.js
 module.exports = {
@@ -90,5 +125,6 @@ module.exports = {
   onSignIn,
   onSignOut,
   onClick,
-  checkWinner
+  checkWinner,
+  onNewGame
 }

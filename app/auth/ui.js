@@ -99,11 +99,28 @@ const signOutFailure = function (error) {
   console.error('error is', error)
 }
 
+const newGameStart = function (error) {
+  // tell the user it was successful - new game has started
+  $('#error-message').text('Welcome to the game! A new game has started.')
+
+  // remove existing classes, then add a red text-danger class from bootstrap
+  $('#error-message').removeClass()
+  $('#error-message').addClass('text-success')
+
+  // After clicking new game, hide all sections and show only game
+  $('#before-sign-in').hide()
+  $('#after-sign-in').hide()
+
+  // print the error
+  console.error('error is', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  newGameStart
 }

@@ -13,6 +13,7 @@ $(() => {
   // select the button with the id sign out and call the onSightOut
   // function anytime the button is clicked
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#new-game').on('submit', authEvents.onNewGame)
 
   // $('#change-password').on('submit', authEvents.onChangePassword)
 
