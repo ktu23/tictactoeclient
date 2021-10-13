@@ -16,4 +16,3 @@ test
     3.  show sign out after game is over, so show both new game button and reset 
 11. 
 
-New Pull Test

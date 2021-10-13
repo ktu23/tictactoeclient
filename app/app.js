@@ -17,6 +17,7 @@ $(() => {
 
   // $('#change-password').on('submit', authEvents.onChangePassword)
 
+  // put all of the boxes separately
   $('.play1').on('click', authEvents.onClick)
   $('.play2').on('click', authEvents.onClick)
   $('.play3').on('click', authEvents.onClick)
@@ -26,4 +27,5 @@ $(() => {
   $('.play7').on('click', authEvents.onClick)
   $('.play8').on('click', authEvents.onClick)
   $('.play9').on('click', authEvents.onClick)
+
 })
