@@ -40,35 +40,35 @@
             <button class="btn btn-primary">Sign In</button>
           </fieldset>
 
-          <!-- Put this after sign on - but here first to make it easier to test -->
-          <!-- <form id="sign-out">
-            <fieldset>
-              <legend>Sign Out</legend>
-              <button class="btn btn-primary">Sign Out</button>
-            </fieldset>
-          </form> -->
+                        <!-- Put this after sign on - but here first to make it easier to test -->
+                        <!-- <form id="sign-out">
+                          <fieldset>
+                            <legend>Sign Out</legend>
+                            <button class="btn btn-primary">Sign Out</button>
+                          </fieldset>
+                        </form> -->
           <br>
           <br>
           <br>
-          <!-- USE THIS FOR TESTING -- JUST HIDE FOR NOW -->
-          <!-- <h4>Play a Tic Tac Toe Game!</h4>
-          <div id="gamegrid">
-            <div class="row">
-              <div class="play1">1</div>
-              <div class="play2">2</div>
-              <div class="play3">3</div>
-            </div>
-            <div class="row">
-              <div class="play4">4</div>
-              <div class="play5">5</div>
-              <div class="play6">6</div>
-            </div>
-            <div class="row">
-              <div class="play7">7</div>
-              <div class="play8">8</div>
-              <div class="play9">9</div>
-            </div>
-          </div> -->
+                        <!-- USE THIS FOR TESTING -- JUST HIDE FOR NOW -->
+                              <!-- <h4>Play a Tic Tac Toe Game!</h4>
+                              <div id="gamegrid">
+                                <div class="row">
+                                  <div class="play1">1</div>
+                                  <div class="play2">2</div>
+                                  <div class="play3">3</div>
+                                </div>
+                                <div class="row">
+                                  <div class="play4">4</div>
+                                  <div class="play5">5</div>
+                                  <div class="play6">6</div>
+                                </div>
+                                <div class="row">
+                                  <div class="play7">7</div>
+                                  <div class="play8">8</div>
+                                  <div class="play9">9</div>
+                                </div>
+                              </div> -->
 
 
         </form>
@@ -92,34 +92,40 @@
       </section>
 
       <!-- After New Game Start-->
-      <section id="after-new-game">
+      <section id="after-new-game" class="hide">
         <h4>Have fun!</h4>
         <h4>Play a Tic Tac Toe Game!</h4>
         <div id="gamegrid">
           <div class="row">
-            <div class="play1">1</div>
-            <div class="play2">2</div>
-            <div class="play3">3</div>
+            <div class="play1"></div>
+            <div class="play2"></div>
+            <div class="play3"></div>
           </div>
           <div class="row">
-            <div class="play4">4</div>
-            <div class="play5">5</div>
-            <div class="play6">6</div>
+            <div class="play4"></div>
+            <div class="play5"></div>
+            <div class="play6"></div>
           </div>
           <div class="row">
-            <div class="play7">7</div>
-            <div class="play8">8</div>
-            <div class="play9">9</div>
+            <div class="play7"></div>
+            <div class="play8"></div>
+            <div class="play9"></div>
           </div>
         </div>
-        <!-- <form id="sign-out">
-          <fieldset>
-            <legend>Sign Out</legend>
-            <button class="btn btn-primary">Sign Out</button>
-          </fieldset>
-        </form> -->
+
+        <div id="winnerOne">
+        </div>
     </section>
 
+    <!-- After game ends -->
+    <section id="gameOver" class="hide">
+      <form id="resetGame">
+        <fieldset>
+          <!-- <legend>New Game</legend> -->
+          <button class="btn btn-primary">Reset</button>
+        </fieldset>
+      </form>
+  </section>
 
 
       <!-- create a section for our user feedback -->

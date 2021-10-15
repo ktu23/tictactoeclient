@@ -14,6 +14,7 @@ $(() => {
   // function anytime the button is clicked
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#new-game').on('submit', authEvents.onNewGame)
+  $('#resetGame').on('submit', authEvents.onNewGameReset)
 
   // $('#change-password').on('submit', authEvents.onChangePassword)
 
@@ -27,5 +28,4 @@ $(() => {
   $('.play7').on('click', authEvents.onClick)
   $('.play8').on('click', authEvents.onClick)
   $('.play9').on('click', authEvents.onClick)
-
 })

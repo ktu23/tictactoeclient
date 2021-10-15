@@ -14,6 +14,7 @@ $black: #000;
   display: none;
 }
 
+// make the game grid
 #gamegrid {
   display: flex;
   flex-direction: column;
@@ -26,6 +27,7 @@ $black: #000;
   display: flex;
 }
 
+// display the game grid with a border and change the height/width
 .row > div {
   border: 1px solid blue;
   display: flex;
@@ -33,3 +35,7 @@ $black: #000;
   height: 100px;
 }
 
+.hide {
+  display: none;
+
+}

@@ -31,7 +31,7 @@ const signIn = function (formData) {
   })
 }
 
-// formData will be our credentials object w/ email, password
+// create a function for signOut
 const signOut = function () {
   // make a request to POST /sign-up
   return $.ajax({
@@ -45,6 +45,7 @@ const signOut = function () {
   })
 }
 
+// create a function for newGame
 const newGame = function () {
   return $.ajax({
     url: `${config.apiUrl}/games`,

@@ -52,6 +52,9 @@ const signInSuccess = function(responseData) {
   $('#before-sign-in').hide()
   // After we sign in, show the section with the id `after-sign-in`
   $('#after-sign-in').show()
+  $('#after-new-game').hide()
+
+  $('#gameOver').hide()
 
   console.log('responseData is', responseData)
 }
@@ -99,6 +102,7 @@ const signOutFailure = function (error) {
   console.error('error is', error)
 }
 
+// create a new const for newGameStart to display what it will do when newGame button is clicked
 const newGameStart = function (error) {
   // tell the user it was successful - new game has started
   $('#error-message').text('Welcome to the game! A new game has started.')
@@ -107,9 +111,11 @@ const newGameStart = function (error) {
   $('#error-message').removeClass()
   $('#error-message').addClass('text-success')
 
-  // After clicking new game, hide all sections and show only game
+  // After clicking new game, hide all previous sections and show only game
   $('#before-sign-in').hide()
   $('#after-sign-in').hide()
+
+  $('#after-new-game').show()
 
   // print the error
   console.error('error is', error)
@@ -123,4 +129,5 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newGameStart
+
 }
